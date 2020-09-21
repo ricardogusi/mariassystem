@@ -21,7 +21,7 @@ h3 {
   color: #297894;
 }
 
-button {
+.adicionarButton {
   position: absolute;
   right: 1rem;
   top: -2.5rem;
@@ -35,7 +35,7 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+.adicionarButton:hover {
   background-color: #ffcb94;
   color: #297894;
   font-weight: bold;
