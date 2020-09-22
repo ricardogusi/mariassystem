@@ -1,7 +1,15 @@
 import React from "react";
 import styles from "./datamodal.module.css";
 
-const Modal = ({ setModal, handleJogo, handlePontuacao, handlePartida }) => {
+const Modal = ({
+  setModal,
+  jogo,
+  handlePontuacao,
+  handlePartida,
+  handleFocus,
+  handleKeyDown,
+  ...props
+}) => {
   function removeModal(event) {
     if (event.target === event.currentTarget) {
       setModal(false);
@@ -19,9 +27,16 @@ const Modal = ({ setModal, handleJogo, handlePontuacao, handlePartida }) => {
         </div>
         <div className={styles.form}>
           <h2>Jogo número:</h2>
-          <input type="number" min="0" max="1000" onBlur={handleJogo} />
+          <h2>{jogo}</h2>
           <h2>Pontuação:</h2>
-          <input type="number" min="0" max="1000" onBlur={handlePontuacao} />
+          <input
+            type="number"
+            min="0"
+            max="999"
+            onBlur={handlePontuacao}
+            onFocus={handleFocus}            
+            autoFocus
+          />
           <button className={styles.cadastrarButton} onClick={handlePartida}>
             Cadastra Partida
           </button>

@@ -12,8 +12,6 @@ var partidas = {
 };
 
 const CardData = () => {
-  const [modal, setModal] = useState();
-
   const partidasPadrao = [
     {
       jogo: 1,
@@ -49,7 +47,8 @@ const CardData = () => {
     },
   ];
 
-  const [jogos, setJogos] = useState();
+  const [modal, setModal] = useState();
+  const [jogos, setJogos] = useState(5);
   const [pontuacao, setPontuacao] = useState();
   const [maximo, setMaximo] = useState(24);
   const [minimo, setMinimo] = useState(10);
@@ -60,27 +59,25 @@ const CardData = () => {
     setModal(true);
   }
 
-  console.log("Pontos: " + pontuacao)
-  console.log("Maximo: " + maximo)
-  console.log("Minimo: " + minimo)
-
-  function handleJogo({ target }) {
-    setJogos(target.value);
-  }
-
   function handlePontuacao({ target }) {
-    setPontuacao(target.value);
+    if (target.value < 1000 && target.value > 0) {
+      setPontuacao(Number(target.value));
+    } else {
+      alert("Por favor insira um pontuação entre 0 e 1000");
+      return;
+    }
   }
 
   useEffect(() => {
     if (pontuacao > maximo) {
       setMaximo(pontuacao);
-      
+      setQuebraMax(quebraMax + 1);
     }
     if (pontuacao < minimo) {
       setMinimo(pontuacao);
+      setQuebraMin(quebraMin + 1);
     }
-  }, [maximo,minimo,pontuacao])
+  }, [maximo, minimo, pontuacao]);
 
   function handlePartida() {
     partidas.addElem({
@@ -91,9 +88,14 @@ const CardData = () => {
       quebramin: quebraMin,
       quebramax: quebraMax,
     });
-    
+
+    setJogos(jogos + 1);
 
     setModal(false);
+  }
+
+  function handleFocus(event) {
+    event.target.value = "";
   }
 
   return (
@@ -101,32 +103,42 @@ const CardData = () => {
       {modal && (
         <Modal
           setModal={setModal}
-          handleJogo={handleJogo}
+          jogo={jogos}
           handlePontuacao={handlePontuacao}
           handlePartida={handlePartida}
+          handleFocus={handleFocus}
         />
       )}
 
-      {Array.from(partidasPadrao).map((jogo) => (
-        <div key={jogo.jogo} className={styles.data}>
-          <p>{jogo.jogo}</p>
-          <p>{jogo.placar}</p>
-          <p>{jogo.min}</p>
-          <p>{jogo.max}</p>
-          <p>{jogo.quebramin}</p>
-          <p>{jogo.quebramax}</p>
-        </div>
-      ))}
-      {Array.from(partidas).map((jogo) => (
-        <div key={jogo.jogo} className={styles.data}>
-          <p>{jogo.jogo}</p>
-          <p>{jogo.placar}</p>
-          <p>{jogo.min}</p>
-          <p>{jogo.max}</p>
-          <p>{jogo.quebramin}</p>
-          <p>{jogo.quebramax}</p>
-        </div>
-      ))}
+      {Array.from(partidas)
+        .sort(function (a, b) {
+          return b.jogo - a.jogo;
+        })
+        .map((jogo) => (
+          <div key={jogo.jogo} className={styles.data}>
+            <p># {jogo.jogo}</p>
+            <p>{jogo.placar}</p>
+            <p>{jogo.min}</p>
+            <p>{jogo.max}</p>
+            <p>{jogo.quebramin}</p>
+            <p>{jogo.quebramax}</p>
+          </div>
+        ))}
+
+      {Array.from(partidasPadrao)
+        .sort(function (a, b) {
+          return b.jogo - a.jogo;
+        })
+        .map((jogo) => (
+          <div key={jogo.jogo} className={styles.data}>
+            <p># {jogo.jogo}</p>
+            <p>{jogo.placar}</p>
+            <p>{jogo.min}</p>
+            <p>{jogo.max}</p>
+            <p>{jogo.quebramin}</p>
+            <p>{jogo.quebramax}</p>
+          </div>
+        ))}
     </Card>
   );
 };
