@@ -27,7 +27,7 @@ const Modal = ({
         </div>
         <div className={styles.form}>
           <h2>Jogo número:</h2>
-          <h2>{jogo}</h2>
+          <h2># {jogo}</h2>
           <h2>Pontuação:</h2>
           <input
             type="number"

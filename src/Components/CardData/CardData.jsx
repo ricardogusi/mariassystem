@@ -12,7 +12,7 @@ var partidas = {
 };
 
 const CardData = () => {
-  const partidasPadrao = [
+   const partidasPadrao = [
     {
       jogo: 1,
       placar: 12,
@@ -47,6 +47,7 @@ const CardData = () => {
     },
   ];
 
+
   const [modal, setModal] = useState();
   const [jogos, setJogos] = useState(5);
   const [pontuacao, setPontuacao] = useState();
@@ -68,6 +69,8 @@ const CardData = () => {
     }
   }
 
+  
+
   useEffect(() => {
     if (pontuacao > maximo) {
       setMaximo(pontuacao);
@@ -77,7 +80,7 @@ const CardData = () => {
       setMinimo(pontuacao);
       setQuebraMin(quebraMin + 1);
     }
-  }, [maximo, minimo, pontuacao]);
+  }, [maximo, minimo, pontuacao, quebraMax, quebraMin]);
 
   function handlePartida() {
     partidas.addElem({
@@ -143,4 +146,8 @@ const CardData = () => {
   );
 };
 
+
+
+
 export default CardData;
+

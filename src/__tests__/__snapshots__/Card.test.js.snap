@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderiza corretamente 1`] = `
+Array [
+  <h1>
+    Just do it!
+  </h1>,
+  <button
+    className="adicionarButton"
+  >
+    Adicionar Jogo
+  </button>,
+  <div
+    className="header"
+  >
+    <h3>
+      Jogo
+    </h3>
+    <h3>
+      Placar
+    </h3>
+    <h3>
+      Mín da Temporada
+    </h3>
+    <h3>
+      Máx da Temporada
+    </h3>
+    <h3>
+      Quebra recorde Mín
+    </h3>
+    <h3>
+      Quebra recorde Máx
+    </h3>
+  </div>,
+  <div
+    className="card"
+  />,
+]
+`;
