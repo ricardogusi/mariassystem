@@ -9,7 +9,7 @@
 
 Sistema feito para a Maria, jogadora de basquete, registrar suas pontuações. A cada jogo ela anota a quantidade de pontos marcados, e ela gostaria de saber qual foi o máximo de pontos feito na temporada e qual foi o mínimo, também gostaria de saber quantas vezes ela quebrou o recorde de pontos, tanto no máximo quanto mínimo.
 
-Para utilizar o sistema você pode acessar o link: [https://mariassystem.vercel.app/](https://mariassystem.vercel.app/ "https://mariassystem.vercel.app/")
+Para utilizar o sistema você pode acessar o link: [https://mariassystem.vercel.app/](https://mariassystem.vercel.app/)
 
 Segue abaixo imagens que podem te auxiliar no uso.
 
