@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderiza corretamente 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Just do it!
+  </h1>
+  <button
+    className="adicionarButton"
+    onClick={[Function]}
+  >
+    Adicionar Jogo
+  </button>
+  <div
+    className="header"
+  >
+    <h3>
+      Jogo
+    </h3>
+    <h3>
+      Placar
+    </h3>
+    <h3>
+      Mín da Temporada
+    </h3>
+    <h3>
+      Máx da Temporada
+    </h3>
+    <h3>
+      Quebra recorde Mín
+    </h3>
+    <h3>
+      Quebra recorde Máx
+    </h3>
+  </div>
+  <div
+    className="card"
+  >
+    <div
+      className="data"
+    >
+      <p>
+        # 
+        4
+      </p>
+      <p>
+        24
+      </p>
+      <p>
+        10
+      </p>
+      <p>
+        24
+      </p>
+      <p>
+        1
+      </p>
+      <p>
+        1
+      </p>
+    </div>
+    <div
+      className="data"
+    >
+      <p>
+        # 
+        3
+      </p>
+      <p>
+        10
+      </p>
+      <p>
+        10
+      </p>
+      <p>
+        24
+      </p>
+      <p>
+        1
+      </p>
+      <p>
+        1
+      </p>
+    </div>
+    <div
+      className="data"
+    >
+      <p>
+        # 
+        2
+      </p>
+      <p>
+        24
+      </p>
+      <p>
+        12
+      </p>
+      <p>
+        24
+      </p>
+      <p>
+        0
+      </p>
+      <p>
+        1
+      </p>
+    </div>
+    <div
+      className="data"
+    >
+      <p>
+        # 
+        1
+      </p>
+      <p>
+        12
+      </p>
+      <p>
+        12
+      </p>
+      <p>
+        12
+      </p>
+      <p>
+        0
+      </p>
+      <p>
+        0
+      </p>
+    </div>
+  </div>
+</div>
+`;

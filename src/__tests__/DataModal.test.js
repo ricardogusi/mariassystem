@@ -1,18 +1,17 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer'
-import CardData from '../Components/CardData/CardData.jsx'
+import DataModal from '../Components/DataModal/DataModal.jsx'
 
 
 
 it('Renderiza corretamente', () => {
     const tree = renderer
-      .create(<CardData /> )
+      .create(<DataModal /> )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   
+
   
-
-

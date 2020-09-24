@@ -5,10 +5,11 @@
   height: 55vh;
   display: flex;
   font-family: "Raleway", sans-serif;
-  padding: .5rem;
+  padding: 0.5rem;
   flex-direction: column;
   position: relative;
   overflow: auto;
+  
 }
 
 

@@ -2,12 +2,13 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   text-align: center;
-  margin-top: 15px;
+  margin-top: 10px;
   border: none;
   background-color: #fb962a;
   border-radius: 5px;
   color: #297894;
   font-weight: bold;
+  
   
 }
 

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderiza corretamente 1`] = `
+<div
+  className="container"
+  onClick={[Function]}
+>
+  <div
+    className="modal anime"
+  >
+    <div
+      className="header"
+    >
+      <button
+        className="headerButton"
+        onClick={[Function]}
+      >
+        X
+      </button>
+      <p>
+        Adicione as informações do seu jogo
+      </p>
+    </div>
+    <div
+      className="form"
+    >
+      <h2>
+        Jogo número:
+      </h2>
+      <h2>
+        # 
+      </h2>
+      <h2>
+        Pontuação:
+      </h2>
+      <input
+        autoFocus={true}
+        max="999"
+        min="0"
+        type="number"
+      />
+      <button
+        className="cadastrarButton"
+      >
+        Cadastra Partida
+      </button>
+    </div>
+  </div>
+</div>
+`;

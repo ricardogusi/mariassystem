@@ -102,6 +102,7 @@ const CardData = () => {
   }
 
   return (
+    
     <Card handleClick={handleClick}>
       {modal && (
         <Modal

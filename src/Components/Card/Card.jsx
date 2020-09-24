@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./card.module.css";
+import logo from '../../Assets/logo.png'
 
 
 
@@ -11,7 +12,7 @@ const Card = ({handleClick, children}) => {
   return (
   
       <>
-      <h1>Just do it!</h1>
+      <h1><img src={logo} alt="logo"/></h1>
       <button className={styles.adicionarButton} onClick={handleClick}>
         Adicionar Jogo
       </button>
